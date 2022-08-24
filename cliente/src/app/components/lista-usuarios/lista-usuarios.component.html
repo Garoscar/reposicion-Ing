@@ -1,0 +1,51 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Foto</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apelldio</th>
+      <th scope="col">DNI</th>
+      <th scope="col">Fecha de nacimiento</th>
+      <th scope="col">Correo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios; index as i">
+      <th scope="row">{{i + 1}}</th>
+      <td>
+        <div>
+          <img [src]="usuario.foto" alt="foto" class="img-thumbnail" width="100">
+        </div>
+      </td>
+      <td>
+        <div class="">
+          {{usuario.nombre}}
+        </div>
+      </td>
+      <td>
+        <div class="">
+          {{usuario.apellido}}
+        </div>
+      </td>
+      <td>
+        <div class="">
+          {{usuario.dni}}
+        </div>
+      </td>
+      <td>
+        <div class="">
+          {{usuario.fechaNacimiento | date:'dd/MM/yyyy'}}
+        </div>
+      </td>
+      <td>
+        <div class="">
+          {{usuario.correo}}
+        </div>
+      </td>
+
+    </tr>
+
+
+  </tbody>
+</table>
